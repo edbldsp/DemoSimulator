@@ -23,6 +23,11 @@ var enjoyhint_script_steps = [{
         'keyCode' : 13
     },
     {
+        selector: '#js-checkbox',
+        event: 'click',
+        description: 'Aceite os termos',
+    },
+    {
         selector: '.js-savebtn',
         event: 'click',
         description: 'Clique em salvar e confirme seus dados!',
@@ -82,6 +87,11 @@ function cpfValidation(cpf) {
             
         },
         {
+            selector: '#js-checkbox',
+            event: 'click',
+            description: 'Aceite os termos',
+        },
+        {
             selector: '.js-savebtn',
             event: 'click',
             description: 'Clique em salvar e confirme seus dados!',
@@ -133,6 +143,7 @@ $("#name").change(function(){
         $("#error-name").hide();  
     }
 });
+
 function speech() {
     var msg = new SpeechSynthesisUtterance('Este é um projeto desenvolvido pela FITÉQUI. Tem como objetivo a criação de um tutorial de aplicações guiado pelo navegador do usuário. Espero que aproveite!');
     window.speechSynthesis.speak(msg);
