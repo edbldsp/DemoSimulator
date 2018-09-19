@@ -19,35 +19,34 @@
 }
 
 .btn {
-    margin-top:5px;
+    margin-top: 5px;
 }
 
-<<<<<<< HEAD
-.form-group { 
+.form-group {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
 
-    > label {
+    >label {
         width: 100%;
     }
 
-    > .form-control {
+    >.form-control {
         display: inline-block;
         width: 90%;
     }
 
-    .name-icon-check { 
+    .name-icon-check {
         color: green;
     }
 
     .name-icon-error {
         color: red;
     }
-=======
+}
+
 #btnSpeech {
-    width:4%;
+    width: 4%;
     max-width: 4%;
->>>>>>> 03385761add5eecf39dec88b335b3fd90fe3974e
 }
