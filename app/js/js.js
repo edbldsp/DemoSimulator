@@ -121,3 +121,8 @@ function getData() {
     $("#username").text(nome);
     $("#document").text(documento);
 }
+
+function speech() {
+    var msg = new SpeechSynthesisUtterance('Este é um projeto desenvolvido pela FITEC. Tem como objetivo a criação de um tutorial de aplicações guiado pelo navegador do usuário. Espero que aproveite!');
+    window.speechSynthesis.speak(msg);
+}
