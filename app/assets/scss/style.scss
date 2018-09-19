@@ -21,3 +21,27 @@
 .btn {
     margin-top:5px;
 }
+
+.form-group { 
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    > label {
+        width: 100%;
+    }
+
+    > .form-control {
+        display: inline-block;
+        width: 90%;
+    }
+
+    .name-icon-check { 
+        color: green;
+    }
+
+    .name-icon-error {
+        color: red;
+    }
+}

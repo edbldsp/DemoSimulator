@@ -29,8 +29,6 @@ var enjoyhint_script_steps = [{
     },
 ];
 
-
-
 enjoyhint_instance.set(enjoyhint_script_steps);
 
 enjoyhint_instance.run();
@@ -121,3 +119,14 @@ function getData() {
     $("#username").text(nome);
     $("#document").text(documento);
 }
+
+$("#name").change(function(){
+    var nome = $("#name");
+    if (nome.val().length < 3) {
+        $(".name-icon-check").hide();
+        $(".name-icon-error").show();
+    } else {
+        $(".name-icon-check").show();
+        $(".name-icon-error").hide();  
+    }
+});
