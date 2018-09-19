@@ -1,0 +1,57 @@
+.more-information {
+    background-color: #f9f9f9;
+    margin-bottom: 36px;
+    margin-top: 36px;
+    padding: 18px;
+    .title {
+        color: $azul-escuro;
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    .subtitle {
+        color: $azul-escuro;
+        font-size: 1.2em;
+    }
+    .description {
+        color: $cinza-claro;
+    }
+    .number {
+        color: $azul-escuro;
+        font-size: 4em;
+        font-weight: lighter;
+    }
+    .years {
+        font-size: 32px;
+        margin: 0;
+    }
+    .legend {
+        color: $azul-escuro;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .more-information {
+        padding: 36px;
+        .number {
+            margin-bottom: 0;
+            margin-left: 100px;
+        }
+        .legend {
+            margin-left: 100px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .title {
+        margin-left: 18px;
+    }
+    .subtitle {
+        margin-left : 18px;
+    }
+    .description {
+        margin-left: 18px;
+    }
+}

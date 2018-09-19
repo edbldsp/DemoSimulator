@@ -1,0 +1,41 @@
+.clients-carousel {
+    margin-bottom: 18px;
+    margin-top: 18px;
+    .owl-prev,
+    .owl-next {
+        color: #000;
+        cursor: pointer;
+        margin-top: -20px;
+        position: absolute;
+        top: 60%;
+        z-index: 1000;
+    }
+    .owl-next {
+        right: 0%;
+    }
+    .client-img {
+        display: block;
+        padding: 0 20px;
+        width: 100%;
+    }
+    .icone {
+        width: 15px;
+        height: 15px;
+        fill: #747474;
+    }
+}
+
+.feedback-carousel {
+    .owl-prev,
+    .owl-next {
+        color: #fff;
+        cursor: pointer;
+        margin-top: 0px;
+        position: absolute;
+        top: 40%;
+        z-index: 1000;
+    }
+    .owl-next {
+        right: 0%;
+    }
+}

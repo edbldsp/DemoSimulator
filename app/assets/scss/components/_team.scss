@@ -1,0 +1,21 @@
+.team {
+    background-color : $azul-escuro;
+    margin: 24px 0;
+
+    .title {
+        color : $branco;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .name {
+        color : $branco;
+        text-align: center;
+    }
+
+    .description {
+        color : #fff;
+        padding : 10px 20px;
+    }
+
+}

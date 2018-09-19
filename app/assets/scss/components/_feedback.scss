@@ -1,0 +1,50 @@
+.feedback {
+    background-color : $azul-claro;
+    border-bottom: 5px solid $azul-escuro;
+    border-top: 5px solid $azul-escuro;
+    height: 100vh;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    padding: 80px 18px;
+
+    .title {
+        color : #fff;
+        text-align: center;
+    }
+
+    .icone {
+        fill: #fff;
+        display: block;
+        height: 50px;
+        margin: 10px auto;
+        width: 50px;
+    }
+
+    .description {
+        color : #fff;
+        font-style: italic;
+        text-align: center;
+    }
+
+    .author {
+        color : #fff;
+        font-size: .8em;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .feedback{
+        height: 50vh;
+        padding: 40px 18px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .feedback{
+        height: 50vh;
+        padding: 60px 18px;
+    }
+}
+    

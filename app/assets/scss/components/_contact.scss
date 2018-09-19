@@ -1,0 +1,36 @@
+.contact {
+    margin: 18px auto;
+    text-align: left;
+
+    .name {
+        color : $azul-escuro;
+        font-size: 1.1em;
+        margin: 0;
+        text-align: center;
+    }
+
+    .role {
+        margin: 0;
+        font-style: italic;
+    }
+
+    .phone {
+        margin: 0 0 18px;
+        font-style: italic;
+        text-align: center;
+    }
+
+    .arkterra {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    .arkphone {
+        font-size: 1.1em;
+    }
+
+    .arkmail {
+        font-size: 1.1em;
+    }
+
+}

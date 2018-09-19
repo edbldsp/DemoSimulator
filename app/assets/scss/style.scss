@@ -1,0 +1,23 @@
+@import "settings/settings";
+
+@import "tools/tools";
+
+@import "generic/generic";
+
+@import "base/base";
+
+@import "objects/btn";
+@import "objects/service-card";
+@import "objects/info";
+@import "objects/img-thumbnail";
+
+
+@import "trumps/trumps";
+
+.table {
+    margin-bottom: 0px;
+}
+
+.btn {
+    margin-top:5px;
+}
