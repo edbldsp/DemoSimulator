@@ -120,6 +120,7 @@ function getData() {
     $("#document").text(documento);
 }
 
+<<<<<<< HEAD
 $("#name").change(function(){
     var nome = $("#name");
     if (nome.val().length < 3) {
@@ -130,3 +131,9 @@ $("#name").change(function(){
         $(".name-icon-error").hide();  
     }
 });
+=======
+function speech() {
+    var msg = new SpeechSynthesisUtterance('Este é um projeto desenvolvido pela FITEC. Tem como objetivo a criação de um tutorial de aplicações guiado pelo navegador do usuário. Espero que aproveite!');
+    window.speechSynthesis.speak(msg);
+}
+>>>>>>> 03385761add5eecf39dec88b335b3fd90fe3974e
