@@ -1,10 +1,11 @@
 var enjoyhint_instance = new EnjoyHint({});
 
 var enjoyhint_script_steps = [{
-        'key .js-nome-completo': 'Digite seu nome completo e tecle enter',
-        'keyCode' : 13,
+        selector: '.js-nome-completo',
+        event: 'key',
+        description: 'Digite seu nome completo e tecle enter',
+        'keyCode' : 13
     },
-
     {
         selector: '.js-identidade',
         event: 'click',
@@ -16,22 +17,19 @@ var enjoyhint_script_steps = [{
         description: 'Escolha CPF na lista'
     },
     {
-        'key #js-cpf': 'Digite seu CPF e tecle enter!',
+        selector: '#js-cpf',
+        event: 'key',
+        description: 'Digite seu CPF e tecle enter!',
         'keyCode' : 13
     },
     {
-        'next .js-savebtn': 'Clique em salvar e confirme seus dados!',
-        'skipButton': {
-            className: "mySkip",
-            text: "Fechar"
-        },
-        'nextButton': {
-            className: "myNext",
-            text: "Próximo"
-        },
+        selector: '.js-savebtn',
+        event: 'click',
+        description: 'Clique em salvar e confirme seus dados!',
     },
-
 ];
+
+
 
 enjoyhint_instance.set(enjoyhint_script_steps);
 
@@ -72,11 +70,40 @@ function testaCPF(strCPF) {
 }
 
 function cpfValidation(cpf) {
+    var enjoyhint_script_steps2 = [
+        {
+            
+        },
+        {
+            selector: '#js-cpf',
+            event: 'key',
+            description: 'Insira um CPF válido!',
+            'keyCode' : 13
+        },
+        {
+            
+        },
+        {
+            selector: '.js-savebtn',
+            event: 'click',
+            description: 'Clique em salvar e confirme seus dados!',
+        },
+    ];
     $("#helpBlock").remove();
     if (!testaCPF(cpf)) {
         $("#js-render-input").append(`<span id="helpBlock" class="help-block has-error">
             CPF Inválido!
         </span>`);
+
+        debugger;
+    
+        enjoyhint_instance.set(enjoyhint_script_steps2);
+        enjoyhint_instance.run();
+        var enjoyhint_script_steps2 = [];
+    }
+    else {
+        getData();
+        $('#myModal').modal('show');
     }
 
 }
