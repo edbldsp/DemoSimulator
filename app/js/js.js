@@ -93,13 +93,16 @@ function cpfValidation(cpf) {
             CPF Inválido!
         </span>`);
 
-        debugger;
-    
+        $("#check-cpf").hide();
+        $("#error-cpf").show();
+
         enjoyhint_instance.set(enjoyhint_script_steps2);
         enjoyhint_instance.run();
         var enjoyhint_script_steps2 = [];
     }
     else {
+        $("#check-cpf").show();
+        $("#error-cpf").hide();
         getData();
         $('#myModal').modal('show');
     }
@@ -123,14 +126,14 @@ function getData() {
 $("#name").change(function(){
     var nome = $("#name");
     if (nome.val().length < 3) {
-        $(".name-icon-check").hide();
-        $(".name-icon-error").show();
+        $("#check-name").hide();
+        $("#error-name").show();
     } else {
-        $(".name-icon-check").show();
-        $(".name-icon-error").hide();  
+        $("#check-name").show();
+        $("#error-name").hide();  
     }
 });
 function speech() {
-    var msg = new SpeechSynthesisUtterance('Este é um projeto desenvolvido pela FITEC. Tem como objetivo a criação de um tutorial de aplicações guiado pelo navegador do usuário. Espero que aproveite!');
+    var msg = new SpeechSynthesisUtterance('Este é um projeto desenvolvido pela FITÉQUI. Tem como objetivo a criação de um tutorial de aplicações guiado pelo navegador do usuário. Espero que aproveite!');
     window.speechSynthesis.speak(msg);
 }
