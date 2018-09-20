@@ -10,6 +10,10 @@ var enjoyhint_script_steps = [{
             className: "myNext",
             text: "Próximo"
         },
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance('Gráfico de barras');
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
         'next .js-chart2': 'Gráfico de Pizza',
@@ -21,9 +25,13 @@ var enjoyhint_script_steps = [{
             className: "myNext",
             text: "Próximo"
         },
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance('Gráfico de Pizza');
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
-        'next .js-chart3': 'Gráfico de linha',
+        'next .js-chart3': 'Gráfico de Linha',
         'skipButton': {
             className: "mySkip",
             text: "Fechar"
@@ -32,9 +40,13 @@ var enjoyhint_script_steps = [{
             className: "myNext",
             text: "Próximo"
         },
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance('Gráfico de Linha');
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
-        'next .js-chart4': 'Gráfico de radar',
+        'next .js-chart4': 'Gráfico de Radar',
         'skipButton': {
             className: "mySkip",
             text: "Fechar"
@@ -43,9 +55,13 @@ var enjoyhint_script_steps = [{
             className: "myNext",
             text: "Próximo"
         },
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance('Gráfico de Radar');
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
-        'next .js-chart5': 'Gráfico de bolhas',
+        'next .js-chart5': 'Gráfico de Bolhas',
         'skipButton': {
             className: "mySkip",
             text: "Fechar"
@@ -54,6 +70,10 @@ var enjoyhint_script_steps = [{
             className: "myNext",
             text: "Próximo"
         },
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance('Gráfico de Bolhas');
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
         'next .js-chart6': 'Gráfico Polar',
@@ -65,10 +85,14 @@ var enjoyhint_script_steps = [{
             className: "myNext",
             text: "Próximo"
         },
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance('Gráfico Polar');
+            window.speechSynthesis.speak(msg);
+        }
     },
     //Table
     {
-        'next .firstname': 'Firstname',
+        'next .firstname': 'Primeiro Nome',
         'skipButton': {
             className: "mySkip",
             text: "Fechar"
@@ -77,9 +101,13 @@ var enjoyhint_script_steps = [{
             className: "myNext",
             text: "Próximo"
         },
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance('Primeiro Nome');
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
-        'next .lastname': 'Lastname',
+        'next .lastname': 'Sobrenome',
         'skipButton': {
             className: "mySkip",
             text: "Fechar"
@@ -88,6 +116,10 @@ var enjoyhint_script_steps = [{
             className: "myNext",
             text: "Próximo"
         },
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance('Sobrenome');
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
         'next .email': 'Email',
@@ -99,6 +131,10 @@ var enjoyhint_script_steps = [{
             className: "myNext",
             text: "Próximo"
         },
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance('Email');
+            window.speechSynthesis.speak(msg);
+        }
     },
 
 ];

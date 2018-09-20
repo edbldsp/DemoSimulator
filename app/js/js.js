@@ -4,33 +4,57 @@ var enjoyhint_script_steps = [{
         selector: '.js-nome-completo',
         event: 'key',
         description: 'Digite seu nome completo e tecle enter',
-        'keyCode' : 13
+        'keyCode' : 13,
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance(this.description);
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
         selector: '.js-identidade',
         event: 'click',
-        description: 'Abra a lista'
+        description: 'Abra a lista',
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance(this.description);
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
         selector: '.js-identidade .form-control',
         event: 'click',
-        description: 'Escolha CPF na lista'
+        description: 'Escolha CPF na lista',
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance(this.description);
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
         selector: '#js-cpf',
         event: 'key',
         description: 'Digite seu CPF e tecle enter!',
-        'keyCode' : 13
+        'keyCode' : 13,
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance(this.description);
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
         selector: '#js-checkbox',
         event: 'click',
         description: 'Aceite os termos',
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance(this.description);
+            window.speechSynthesis.speak(msg);
+        }
     },
     {
         selector: '.js-savebtn',
         event: 'click',
         description: 'Clique em salvar e confirme seus dados!',
+        onBeforeStart: function(){
+            var msg = new SpeechSynthesisUtterance(this.description);
+            window.speechSynthesis.speak(msg);
+        }
     },
 ];
 
@@ -81,7 +105,11 @@ function cpfValidation(cpf) {
             selector: '#js-cpf',
             event: 'key',
             description: 'Insira um CPF válido!',
-            'keyCode' : 13
+            'keyCode' : 13,
+            onBeforeStart: function(){
+                var msg = new SpeechSynthesisUtterance(this.description);
+                window.speechSynthesis.speak(msg);
+            }
         },
         {
             
@@ -90,11 +118,19 @@ function cpfValidation(cpf) {
             selector: '#js-checkbox',
             event: 'click',
             description: 'Aceite os termos',
+            onBeforeStart: function(){
+                var msg = new SpeechSynthesisUtterance(this.description);
+                window.speechSynthesis.speak(msg);
+            }
         },
         {
             selector: '.js-savebtn',
             event: 'click',
             description: 'Clique em salvar e confirme seus dados!',
+            onBeforeStart: function(){
+                var msg = new SpeechSynthesisUtterance(this.description);
+                window.speechSynthesis.speak(msg);
+            }
         },
     ];
     $("#helpBlock").remove();
