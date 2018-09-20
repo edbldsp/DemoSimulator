@@ -105,6 +105,7 @@ function cpfValidation(cpf) {
 
         $("#check-cpf").hide();
         $("#error-cpf").show();
+        $( "#js-checkbox" ).prop( "checked", false );
 
         enjoyhint_instance.set(enjoyhint_script_steps2);
         enjoyhint_instance.run();
