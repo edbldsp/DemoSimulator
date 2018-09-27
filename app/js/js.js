@@ -1,3 +1,8 @@
+var btnHintClose = document.getElementsByClassName('enjoyhint_close_btn');
+var btnHintSkip = document.getElementsByClassName('enjoyhint_skip_btn');
+
+var gif = document.getElementById("gif");
+
 var enjoyhint_instance = new EnjoyHint({});
 
 var enjoyhint_script_steps = [{
@@ -8,7 +13,11 @@ var enjoyhint_script_steps = [{
         onBeforeStart: function(){
             var msg = new SpeechSynthesisUtterance(this.description);
             window.speechSynthesis.speak(msg);
-        }
+
+            gif.style.visibility = "visible";
+            btnHintClose[0].addEventListener("click", enjoyhintCloseGif);
+            btnHintSkip[0].addEventListener("click", enjoyhintCloseGif);
+        },
     },
     {
         selector: '.js-identidade',
@@ -17,6 +26,9 @@ var enjoyhint_script_steps = [{
         onBeforeStart: function(){
             var msg = new SpeechSynthesisUtterance(this.description);
             window.speechSynthesis.speak(msg);
+            
+            btnHintClose[0].addEventListener("click", enjoyhintCloseGif);
+            btnHintSkip[0].addEventListener("click", enjoyhintCloseGif);
         }
     },
     {
@@ -26,6 +38,9 @@ var enjoyhint_script_steps = [{
         onBeforeStart: function(){
             var msg = new SpeechSynthesisUtterance(this.description);
             window.speechSynthesis.speak(msg);
+            
+            btnHintClose[0].addEventListener("click", enjoyhintCloseGif);
+            btnHintSkip[0].addEventListener("click", enjoyhintCloseGif);
         }
     },
     {
@@ -36,6 +51,9 @@ var enjoyhint_script_steps = [{
         onBeforeStart: function(){
             var msg = new SpeechSynthesisUtterance(this.description);
             window.speechSynthesis.speak(msg);
+            
+            btnHintClose[0].addEventListener("click", enjoyhintCloseGif);
+            btnHintSkip[0].addEventListener("click", enjoyhintCloseGif);
         }
     },
     {
@@ -45,6 +63,9 @@ var enjoyhint_script_steps = [{
         onBeforeStart: function(){
             var msg = new SpeechSynthesisUtterance(this.description);
             window.speechSynthesis.speak(msg);
+            
+            btnHintClose[0].addEventListener("click", enjoyhintCloseGif);
+            btnHintSkip[0].addEventListener("click", enjoyhintCloseGif);
         }
     },
     {
@@ -54,13 +75,12 @@ var enjoyhint_script_steps = [{
         onBeforeStart: function(){
             var msg = new SpeechSynthesisUtterance(this.description);
             window.speechSynthesis.speak(msg);
+            
+            btnHintClose[0].addEventListener("click", enjoyhintCloseGif);
+            btnHintSkip[0].addEventListener("click", enjoyhintCloseGif);
         }
     },
 ];
-
-enjoyhint_instance.set(enjoyhint_script_steps);
-
-enjoyhint_instance.run();
 
 $("#sel1").change(function () {
     var selected_option = $('#sel1').val();
@@ -109,6 +129,9 @@ function cpfValidation(cpf) {
             onBeforeStart: function(){
                 var msg = new SpeechSynthesisUtterance(this.description);
                 window.speechSynthesis.speak(msg);
+            
+                btnHintClose[0].addEventListener("click", enjoyhintCloseGif);
+                btnHintSkip[0].addEventListener("click", enjoyhintCloseGif);
             }
         },
         {
@@ -121,6 +144,9 @@ function cpfValidation(cpf) {
             onBeforeStart: function(){
                 var msg = new SpeechSynthesisUtterance(this.description);
                 window.speechSynthesis.speak(msg);
+            
+                btnHintClose[0].addEventListener("click", enjoyhintCloseGif);
+                btnHintSkip[0].addEventListener("click", enjoyhintCloseGif);
             }
         },
         {
@@ -130,6 +156,9 @@ function cpfValidation(cpf) {
             onBeforeStart: function(){
                 var msg = new SpeechSynthesisUtterance(this.description);
                 window.speechSynthesis.speak(msg);
+            
+                btnHintClose[0].addEventListener("click", enjoyhintCloseGif);
+                btnHintSkip[0].addEventListener("click", enjoyhintCloseGif);
             }
         },
     ];
@@ -151,6 +180,9 @@ function cpfValidation(cpf) {
         $("#check-cpf").show();
         $("#error-cpf").hide();
         getData();
+
+        gif.style.visibility = "hidden";
+
         $('#myModal').modal('show');
     }
 
@@ -184,4 +216,9 @@ $("#name").change(function(){
 function speech() {
     var msg = new SpeechSynthesisUtterance('Este é um projeto desenvolvido pela FITÉQUI. Tem como objetivo a criação de um tutorial de aplicações guiado pelo navegador do usuário. Espero que aproveite!');
     window.speechSynthesis.speak(msg);
+}
+
+function enjoyhintCloseGif(){
+    gif.style.visibility = "hidden";
+    enjoyhint_instance.set();
 }

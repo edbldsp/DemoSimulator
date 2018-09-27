@@ -31,6 +31,10 @@ var paths = {
         input:      'app/js/**/*.js',
         output:     'build/js/',
     },
+    gif: {
+        input:      'app/assets/*.gif',
+        output:     'build/assets',
+    },
 	font: {
 	input:      'app/assets/fonts/*.*',
         output:     'build/assets/fonts/',
@@ -101,6 +105,12 @@ gulp.task('libs', function() {
 });
 
 
+//COPY GIF
+gulp.task('gif', function() {
+    return gulp.src([paths.gif.input])
+        .pipe(gulp.dest(paths.gif.output));
+});
+
 //COPY JS
 gulp.task('js', function() {
     return gulp.src([paths.js.input])
@@ -127,4 +137,4 @@ gulp.task('watch', function () {
     gulp.watch(paths.livereload.input, ['livereload']);
 });
 
-gulp.task("default", gulpSequence('cleanAll', 'connect', 'sass', 'html','libs','watch','js', 'fonts', 'imagemin'));
+gulp.task("default", gulpSequence('cleanAll', 'connect', 'sass', 'html', 'libs', 'watch', 'js', 'gif', 'fonts', 'imagemin'));
